@@ -1,13 +1,14 @@
 {
   "name": "starter-vite-react-redux_toolkit-typescript_scss",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
     "build-preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives"
+    "update": "pnpm update",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
+    "clean": "rd /s /q build",
+    "clean:all": "rd /s /q node_modules build & rd /s /q build"
   },
   "dependencies": {
     "react": "^18.2.0",
