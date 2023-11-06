@@ -7,5 +7,13 @@ export default defineConfig({
   build: {
     outDir: './build',
     cssCodeSplit: false,
+    rollupOptions: {
+      input: {
+          app: "./src/index.html",
+      },
+  },
+  },
+  server: {
+    open: './src/index.html',
   },
 })
