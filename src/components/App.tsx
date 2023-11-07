@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.scss";
 import type { RootState } from "../store/store.ts";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,7 +16,7 @@ function App() {
     return (
         <div id="app">
             <p>Un début intéressant</p>
-            <button onClick={() => dispatch(increment())}>
+            <button className="button" onClick={() => dispatch(increment())}>
                 Nombre de clic : {startingValue}
             </button>
         </div>

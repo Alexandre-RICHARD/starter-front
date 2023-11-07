@@ -2,4 +2,11 @@
 
 #app {
     font-size: 30px;
+    text-align: center;
+
+    .button {
+        padding: 8px;
+        box-shadow: 0px 0px 8px 2px black;
+        border-radius: 4px;
+    }
 }

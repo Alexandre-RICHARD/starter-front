@@ -4,7 +4,7 @@
     "start": "vite",
     "build": "tsc && vite build",
     "build-preview": "vite preview",
-    "update": "pnpm update",
+    "update": "pnpm update || npm update",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
     "clean": "rd /s /q build",
