@@ -1,34 +1,35 @@
 {
-  "name": "starter-vite-react-redux_toolkit-typescript_scss",
-  "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
-    "build-preview": "vite preview",
-    "update": "pnpm update || npm update",
-    "lint": "eslint src/**/*.{ts,tsx}  --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
-    "lint & fix": "eslint src/**/*.{ts,tsx} --fix  --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
-    "clean": "rd /s /q build",
-    "clean:all": "rd /s /q node_modules build & rd /s /q build"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@reduxjs/toolkit": "^1.9.7",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@types/react-redux": "^7.1.30",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
-    "@vitejs/plugin-react": "^4.1.1",
-    "eslint": "^8.53.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "react-redux": "^8.1.3",
-    "sass": "^1.69.5",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0"
-  }
+    "name": "starter-vite-react-redux_toolkit-typescript_scss",
+    "scripts": {
+        "start": "vite",
+        "build": "tsc && vite build",
+        "build-preview": "vite preview",
+        "update": "pnpm update || npm update",
+        "lint": "eslint src/**/*.{ts,tsx}  --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
+        "lint & fix": "eslint src/**/*.{ts,tsx} --fix  --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
+        "clean": "rd /s /q build",
+        "clean:all": "rd /s /q node_modules build & rd /s /q build"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@reduxjs/toolkit": "^1.9.7",
+        "@types/node": "^20.9.1",
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "@types/react-redux": "^7.1.30",
+        "@typescript-eslint/eslint-plugin": "^6.11.0",
+        "@typescript-eslint/parser": "^6.11.0",
+        "@vitejs/plugin-react": "^4.2.0",
+        "eslint": "^8.53.0",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.4",
+        "react-redux": "^8.1.3",
+        "sass": "^1.69.5",
+        "typescript": "^5.2.2",
+        "vite": "^4.5.0"
+    }
 }
