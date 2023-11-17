@@ -15,9 +15,9 @@ function App() {
 
     return (
         <div id="app">
-            <p>Un début intéressant</p>
+            <p>Commençons ce projet ici</p>
             <button className="button" onClick={() => dispatch(increment())}>
-                Nombre de clic : {startingValue}
+                Nombre de clic{startingValue < 2 || "s"} : {startingValue}
             </button>
         </div>
     );
