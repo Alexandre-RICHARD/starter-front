@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
@@ -22,6 +22,14 @@ export default defineConfig({
                 app: "./src/index.html",
             },
         },
+    },
+    test: {
+        globals: true,
+        environment: "jsdom",
+        setupFiles: ["src/tests/setup.ts"],
+        env: {
+            IS_REACT_ACT_ENVIRONMENT: "true"
+        }
     },
     server: {
         open: "./src/index.html",

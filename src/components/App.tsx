@@ -12,12 +12,12 @@ function App() {
     const dispatch = useDispatch();
 
     return (
-        <div id="app">
-            <p>Commençons ce projet ici</p>
+        <>
+            <p className="title">{"C'est l'heure d'un nouveau projet"}</p>
             <button className="button" onClick={() => dispatch(increment())}>
                 Nombre de clic{startingValue < 2 || "s"} : {startingValue}
             </button>
-        </div>
+        </>
     );
 }
 
