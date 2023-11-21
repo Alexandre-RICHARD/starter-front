@@ -20,6 +20,10 @@ body {
             padding: 8px;
             box-shadow: 0px 0px 8px 2px black;
             border-radius: 4px;
+
+            &:hover {
+                background-color: #dddddd;
+            }
         }
     }
 }

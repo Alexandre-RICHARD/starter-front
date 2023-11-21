@@ -7,11 +7,14 @@ import { Provider } from "react-redux";
 
 describe("<App />", () => {
     test("App mounts properly", () => {
-        expect(render(<Provider store={store}><App /></Provider>)).toBeTruthy();
+        render(<Provider store={store}><App /></Provider>);
+        const tested = screen;
+        expect(tested).toBeTruthy();
     });
 
-    test("App contains title", () => {
+    test("App mounts properly", () => {
         render(<Provider store={store}><App /></Provider>);
-        expect(screen.getByText("C'est l'heure d'un nouveau projet")).toBeInTheDocument();
+        const tested = screen.getByText("C'est l'heure d'un nouveau projet");
+        expect(tested).toBeInTheDocument();
     });
 });
