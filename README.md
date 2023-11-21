@@ -1,7 +1,7 @@
 Quelques améliorations à faire encore :
 - Rajouter prettier
 - Fournir un provider de store unique et indépendant pour chaque test voir [ce lien](https://redux.js.org/usage/writing-tests#connected-components)
-- Faire le Readme plus clean est justifiant correctement le projet
+- Faire le Readme plus clean et justifiant correctement le projet
 
 
 Voici d'autres liens
