@@ -7,18 +7,17 @@ import { sum } from "@utilities/sum";
 
 import "./App.scss";
 
-
 const App: React.FC = () => {
-    const { listItems, startingValue } = useSelector((state: RootState) => state.global);
+    const { listItems, counterValue } = useSelector((state: RootState) => state.global);
     const dispatch = useDispatch();
 
     const randomNumber = sum(5, 5);
 
     return (
         <>
-            <p className="title">{ randomNumber } C'est l'heure d'un nouveau projet</p>
+            <p className="title">{randomNumber} C'est l'heure d'un nouveau projet</p>
             <button className="button" onClick={() => dispatch(increment())}>
-                Nombre de clic{startingValue < 2 || "s"} : {startingValue}
+                Nombre de clic{counterValue < 2 ? "s" : ""} : {counterValue}
             </button>
             <div data-testid="list">
                 <h1>Une liste :</h1>

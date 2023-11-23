@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from "@store/store";
 
 interface ListItem {
     id: number;
@@ -6,12 +7,12 @@ interface ListItem {
 }
 
 interface ListState {
-    startingValue: number
+    counterValue: number;
     listItems: ListItem[];
 }
 
 const initialState: ListState = {
-    startingValue: 0,
+    counterValue: 0,
     listItems: [
         {
             id: Math.random() * 1000,
@@ -20,12 +21,12 @@ const initialState: ListState = {
     ],
 };
 
-export const globalSlice = createSlice({
+const globalSlice = createSlice({
     name: "global",
     initialState,
     reducers: {
         increment: (state) => {
-            state.startingValue += 1;
+            state.counterValue += 1;
         },
         testAddReducer: (state, action: PayloadAction<ListItem>) => {
             state.listItems.push(action.payload);
@@ -33,6 +34,8 @@ export const globalSlice = createSlice({
     },
 });
 
+export const counterValue = (state: RootState) => state.global.counterValue;
+export const listItems = (state: RootState) => state.global.listItems;
 export const { increment, testAddReducer } = globalSlice.actions;
 
 export default globalSlice.reducer;

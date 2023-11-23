@@ -8,6 +8,7 @@
             "@store/*": ["src/store/*"],
             "@slices/*": ["src/store/slices/*"],
             "@styles/*": ["src/styles/*"],
+            "@tests/*": ["src/tests/*"],
             "@utilities/*": ["src/utilities/*"]
         },
         "target": "ES2020",
@@ -31,6 +32,6 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src", "src/tests/setup.ts"],
+    "include": ["src"],
     "references": [{ "path": "./tsconfig.vite.json" }]
 }
