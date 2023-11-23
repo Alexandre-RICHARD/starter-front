@@ -8,32 +8,83 @@ body {
     align-items: center;
 
     #app {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
 
-        .title {
-            font-weight: 400;
-            margin: 8px;
-        }
+        .starter {
+            max-width: 800px;
 
-        .button {
-            padding: 8px;
-            box-shadow: 0px 0px 8px 2px black;
-            border-radius: 4px;
+            &-presentation {
+                margin: 8px 0;
 
-            &:hover {
-                background-color: #dddddd;
+                .title {
+                    font-size: 30px;
+                    font-weight: 400;
+                    margin: 8px;
+                }
+                .description {
+                    text-align: left;
+                }
+
+                .starter-features-list {
+                    text-align: left;
+
+                    li {
+                        font-size: 20px;
+                        list-style: disc;
+                    }
+                }
             }
-        }
 
-        .add-to-list-button {
-            border: 1px solid #333333;
-            border-radius: 18px;
-            font-size: 20px;
-            padding: 4px;
+            &-demonstration {
+                margin: 8px 0;
 
-            &:hover {
-                background-color: #dddddd;
+                .form-change-number-step {
+                    font-size: 20px;
+                    margin: 6px auto;
+                    width: fit-content;
+                    padding: 3px;
+                    border: 1px solid #000000;
+
+                    input {
+                        max-width: 100px;
+                        text-align: center;
+                        background-color: #dddddd;
+                        padding: 4px;
+                        margin-left: 10px;
+                    }
+                }
+
+                .counter-click {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 15px;
+                    gap: 0 10px;
+
+                    .counter-value {
+                        padding: 3px 8px;
+                        box-shadow: 0px 0px 6px 2px black;
+                        border-radius: 4px;
+                        min-width: 60px;
+                    }
+
+                    .counter-button {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        margin: 0 6px;
+                        border-radius: 12px;
+                        font-size: 30px;
+                        font-weight: 500;
+                        border: 1px solid #888888;
+
+                        &:hover {
+                            background-color: #cccccc;
+                        }
+
+                    }
+                }
             }
         }
     }

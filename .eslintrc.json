@@ -22,9 +22,10 @@
         "sourceType": "module",
         "project": ["./tsconfig.json", "./tsconfig.vite.json"]
     },
-    "plugins": ["@typescript-eslint", "react", "react-refresh"],
+    "plugins": ["@typescript-eslint", "react", "react-refresh", "@stylistic/js"],
     "rules": {
-        "max-lines-per-function": ["error", 60],
+        "max-lines-per-function": ["warn", 100],
+        "max-len": ["warn", 175],
         "max-lines": ["error", 200],
         "indent": ["error", 4],
         "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],

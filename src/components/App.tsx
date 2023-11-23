@@ -2,49 +2,45 @@ import React from "react";
 import type { RootState } from "@store/store.ts";
 import { useSelector, useDispatch } from "react-redux";
 
-import { increment, testAddReducer } from "@slices/globalSlice.ts";
-import { sum } from "@utilities/sum";
+import { changeStep, decrement, increment } from "@slices/globalSlice.ts";
 
 import "./App.scss";
 
 const App: React.FC = () => {
-    const { listItems, counterValue } = useSelector((state: RootState) => state.global);
+    const { counterStep, counterValue } = useSelector((state: RootState) => state.global);
     const dispatch = useDispatch();
 
-    const randomNumber = sum(5, 5);
-
     return (
-        <>
-            <p className="title">{randomNumber} C'est l'heure d'un nouveau projet</p>
-            <button className="button" onClick={() => dispatch(increment())}>
-                Nombre de clic{counterValue < 2 ? "s" : ""} : {counterValue}
-            </button>
-            <div data-testid="list">
-                <h1>Une liste :</h1>
-                <ul>
-                    {listItems.map((listItem) => {
-                        return (
-                            <li key={listItem.id} data-testid="list_item">
-                                {listItem.description}
-                            </li>
-                        );
-                    })}
+        <div className="starter">
+            <div className="starter-presentation">
+                <p className="title">Starter rapide pour un nouveau projet</p>
+                <p className="description">Ce starter contient une configuration précise et complète pour :</p>
+                <ul className="starter-features-list">
+                    <li>Le bundler Vite, rapide et puissant</li>
+                    <li>React, utilisé avec son gestionnaire de state React-Reudx-Toolkit</li>
+                    <li>React Refresh, permettant de recharger sans perdre les infos du state</li>
+                    <li>Typescript pour améliorer la qualité du code et être vigilant sur les erreurs</li>
+                    <li>EsLint pour repérer toutes erreurs allant à l'encontre des règle de clean code</li>
+                    <li>Configuration de test complète avec l'utilisation de vitest, jsdom et React-Testing-Library</li>
+                    <li>SCSS pour écrire son style plus logiquement qu'avec du CSS classique</li>
+                    <li>Des alias pour l'importation plus facile</li>
+                    <li>Des scripts npm pratiques pour automatiser certaines tâches</li>
+                    <li>Une configuration adaptée pour tester plus simplement le store avec Redux</li>
+                    <li>Préparation à l'utilisation d'assets et d'utilities déjà implémenté</li>
                 </ul>
-                <button
-                    role="add-to-list-button"
-                    onClick={() =>
-                        dispatch(
-                            testAddReducer({
-                                id: Math.random() * 1000,
-                                description: "Un nouvel arrivant dans la liste",
-                            })
-                        )
-                    }
-                    className="add-to-list-button">
-                    {"Boutton pour en ajouter d'autre"}
-                </button>
             </div>
-        </>
+            <div className="starter-demonstration">
+                <div className="form-change-number-step">
+                    <label htmlFor="changeStepNumber" >Changer le pas du compteur</label>
+                    <input onChange={(event) => dispatch(changeStep(parseInt(event.target.value)))} type="number" id="changeStepNumber" value={counterStep} />
+                </div>
+                <div className="counter-click">
+                    <button onClick={() => dispatch(decrement())} className="counter-button">-</button>
+                    <p className="counter-value">{counterValue}</p>
+                    <button onClick={() => dispatch(increment())} className="counter-button">+</button>
+                </div>
+            </div>
+        </div>
     );
 };
 

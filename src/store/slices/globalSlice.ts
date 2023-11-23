@@ -1,41 +1,34 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "@store/store";
 
-interface ListItem {
-    id: number;
-    description: string;
-}
-
-interface ListState {
+interface GlobalState {
+    counterStep: number;
     counterValue: number;
-    listItems: ListItem[];
 }
 
-const initialState: ListState = {
-    counterValue: 0,
-    listItems: [
-        {
-            id: Math.random() * 1000,
-            description: "Notre première entrée dans la liste",
-        },
-    ],
+const initialState: GlobalState = {
+    counterStep: 1,
+    counterValue: 0
 };
 
 const globalSlice = createSlice({
     name: "global",
     initialState,
     reducers: {
-        increment: (state) => {
-            state.counterValue += 1;
+        changeStep: (state, action: PayloadAction<number>) => {
+            state.counterStep = action.payload;
         },
-        testAddReducer: (state, action: PayloadAction<ListItem>) => {
-            state.listItems.push(action.payload);
+        decrement: (state) => {
+            state.counterValue -= state.counterStep;
+        },
+        increment: (state) => {
+            state.counterValue += state.counterStep;
         },
     },
 });
 
+export const counterStep = (state: RootState) => state.global.counterStep;
 export const counterValue = (state: RootState) => state.global.counterValue;
-export const listItems = (state: RootState) => state.global.listItems;
-export const { increment, testAddReducer } = globalSlice.actions;
+export const { changeStep, decrement, increment } = globalSlice.actions;
 
 export default globalSlice.reducer;

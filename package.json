@@ -5,7 +5,7 @@
         "test": "vitest",
         "build": "tsc && vite build",
         "build-preview": "vite preview",
-        "update": "pnpm update || npm update",
+        "update": "pnpm update || yarn upgrade || npm update",
         "lint": "eslint src/**/*.{ts,tsx}  --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
         "lint & fix": "eslint src/**/*.{ts,tsx} --fix  --report-unused-disable-directives && echo '\u001b[32mESLint n'a trouvé aucune erreur\u001b[0m'",
         "clean": "rd /s /q build",
@@ -17,6 +17,7 @@
     },
     "devDependencies": {
         "@reduxjs/toolkit": "^1.9.7",
+        "@stylistic/eslint-plugin-js": "^1.4.0",
         "@testing-library/dom": "^9.3.3",
         "@testing-library/jest-dom": "^6.1.4",
         "@testing-library/react": "^14.1.2",
