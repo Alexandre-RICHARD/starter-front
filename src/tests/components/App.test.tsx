@@ -15,7 +15,7 @@ describe("App component", () => {
 
     test("App mounts properly", () => {
         render(<Provider store={store}><App /></Provider>);
-        const tested = screen.getByText("C'est l'heure d'un nouveau projet");
+        const tested = screen.getByText(/C'est l'heure d'un nouveau projet/i);
         expect(tested).toBeInTheDocument();
     });
 });

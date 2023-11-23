@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import globalSlice from "@slices/globalSlice.ts";
-import listSlice from "@slices/listSlice.ts";
 
 export const store = configureStore({
     reducer: {
         global: globalSlice,
-        list: listSlice,
     },
 });
 

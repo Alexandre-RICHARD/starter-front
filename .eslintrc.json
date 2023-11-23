@@ -33,6 +33,7 @@
         "max-depth": ["error", 5],
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
+        "react/no-unescaped-entities": ["error", {"forbid": [">", "\"", "}"]}],
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "no-await-in-loop": "error",

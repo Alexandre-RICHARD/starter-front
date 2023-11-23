@@ -7,7 +7,8 @@
             "@components/*": ["src/components/*"],
             "@store/*": ["src/store/*"],
             "@slices/*": ["src/store/slices/*"],
-            "@styles/*": ["src/styles/*"]
+            "@styles/*": ["src/styles/*"],
+            "@utilities/*": ["src/utilities/*"]
         },
         "target": "ES2020",
         "useDefineForClassFields": true,

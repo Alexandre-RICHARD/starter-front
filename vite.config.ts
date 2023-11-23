@@ -11,6 +11,7 @@ export default defineConfig({
             "@store": path.resolve(__dirname, "./src/store"),
             "@slices": path.resolve(__dirname, "./src/store/slices"),
             "@styles": path.resolve(__dirname, "./src/styles"),
+            "@utilities": path.resolve(__dirname, "./src/utilities"),
         },
     },
     plugins: [react()],
