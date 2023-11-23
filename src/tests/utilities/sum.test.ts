@@ -6,7 +6,10 @@ describe("Sum function", () => {
         expect(sum(1, 4)).toEqual(5);
     });
 
-    // test("Testing error of sum function", () => {
-
-    // });
+    test("Correct use of the sum fonction", () => {
+        expectTypeOf(sum).toBeFunction();
+        expect(() => sum(1, 2)).not.toThrow();
+        expect(sum(0, 0)).toBe(0);
+        expect(sum(0.1, 0.2)).toBeCloseTo(0.3);
+    });
 });
