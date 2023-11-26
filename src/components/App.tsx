@@ -1,14 +1,13 @@
 import React from "react";
-import type { RootState } from "@store/store.ts";
-import { useSelector, useDispatch } from "react-redux";
-
-import { changeStep, decrement, increment } from "@slices/globalSlice.ts";
+import { useAppDispatch, useAppSelector } from "@store/hooks";
+import { counterState, counterActions } from "@/store/slices/counterSlice";
 
 import "./App.scss";
 
 const App: React.FC = () => {
-    const { counterStep, counterValue } = useSelector((state: RootState) => state.global);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
+    const counterStep = useAppSelector(counterState.Step);
+    const counterValue = useAppSelector(counterState.Value);
 
     return (
         <div className="starter">
@@ -32,12 +31,12 @@ const App: React.FC = () => {
             <div className="starter-demonstration">
                 <div className="form-change-number-step">
                     <label htmlFor="changeStepNumber" >Changer le pas du compteur</label>
-                    <input onChange={(event) => dispatch(changeStep(parseInt(event.target.value)))} type="number" id="changeStepNumber" value={counterStep} />
+                    <input onChange={(event) => dispatch(counterActions.changeStep(parseInt(event.target.value)))} type="number" id="changeStepNumber" value={counterStep} />
                 </div>
                 <div className="counter-click">
-                    <button onClick={() => dispatch(decrement())} className="counter-button">-</button>
+                    <button onClick={() => dispatch(counterActions.decrement())} className="counter-button">-</button>
                     <p className="counter-value">{counterValue}</p>
-                    <button onClick={() => dispatch(increment())} className="counter-button">+</button>
+                    <button onClick={() => dispatch(counterActions.increment())} className="counter-button">+</button>
                 </div>
             </div>
         </div>
