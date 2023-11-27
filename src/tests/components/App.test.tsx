@@ -1,9 +1,11 @@
-import { describe, test, expect } from "vitest";
-import { screen } from "@testing-library/react";
-import { renderWithProviders } from "@tests/wrapperProvider";
+import {
+    describe, test, expect
+} from "vitest";
+import {screen} from "@testing-library/react";
+import {renderWithProviders} from "@tests/wrapperProvider";
 import App from "@components/App";
-import { setupStore } from "@store/store";
-import { counterActions } from "@slices/counterSlice";
+import {setupStore} from "@store/store";
+import {counterActions} from "@slices/counterSlice";
 
 describe("App component", () => {
     test("App mounts properly", () => {
@@ -14,7 +16,9 @@ describe("App component", () => {
 
     test("App mounts properly", () => {
         renderWithProviders(<App />);
-        const tested = screen.getByText(/Starter rapide pour un nouveau projet/i);
+        const tested = screen.getByText(
+            /Starter rapide pour un nouveau projet/i
+        );
         expect(tested).toBeInTheDocument();
     });
 });

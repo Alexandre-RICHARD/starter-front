@@ -1,5 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "@store/store";
+import {
+    createSlice, PayloadAction
+} from "@reduxjs/toolkit";
+import type {RootState} from "@store/store";
 
 interface CounterState {
     counterStep: number;
@@ -7,29 +9,29 @@ interface CounterState {
 }
 
 const initialState: CounterState = {
-    counterStep: 1,
-    counterValue: 0
+    "counterStep": 1,
+    "counterValue": 0,
 };
 
 const counterSlice = createSlice({
-    name: "counter",
+    "name": "counter",
     initialState,
-    reducers: {
-        changeStep: (state, action: PayloadAction<number>) => {
+    "reducers": {
+        "changeStep": (state, action: PayloadAction<number>) => {
             state.counterStep = action.payload;
         },
-        increment: (state) => {
+        "increment": state => {
             state.counterValue += state.counterStep;
         },
-        decrement: (state) => {
+        "decrement": state => {
             state.counterValue -= state.counterStep;
         },
     },
 });
 
 export const counterState = {
-    Step: (state: RootState) => state.counter.counterStep,
-    Value: (state: RootState) => state.counter.counterValue,
+    "Step": (state: RootState) => state.counter.counterStep,
+    "Value": (state: RootState) => state.counter.counterValue,
 };
 export const counterActions = counterSlice.actions;
 export default counterSlice.reducer;

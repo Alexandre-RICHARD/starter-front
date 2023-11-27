@@ -1,10 +1,10 @@
-import { defineConfig } from "vitest/config";
+import {defineConfig} from "vitest/config";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-    resolve: {
-        alias: {
+    "resolve": {
+        "alias": {
             "@": path.resolve(__dirname, "./src"),
             "@assets": path.resolve(__dirname, "./src/assets"),
             "@components": path.resolve(__dirname, "./src/components"),
@@ -15,25 +15,25 @@ export default defineConfig({
             "@utilities": path.resolve(__dirname, "./src/utilities"),
         },
     },
-    plugins: [react()],
-    build: {
-        outDir: "./build",
-        cssCodeSplit: false,
-        rollupOptions: {
-            input: {
-                app: "./src/index.html",
+    "plugins": [react()],
+    "build": {
+        "outDir": "./build",
+        "cssCodeSplit": false,
+        "rollupOptions": {
+            "input": {
+                "app": "./src/index.html",
             },
         },
     },
-    test: {
-        globals: true,
-        environment: "jsdom",
-        setupFiles: ["src/tests/setup.ts"],
-        env: {
-            IS_REACT_ACT_ENVIRONMENT: "true",
+    "test": {
+        "globals": true,
+        "environment": "jsdom",
+        "setupFiles": ["src/tests/setup.ts"],
+        "env": {
+            "IS_REACT_ACT_ENVIRONMENT": "true",
         },
     },
-    server: {
-        open: "./src/index.html",
+    "server": {
+        "open": "./src/index.html",
     },
 });
