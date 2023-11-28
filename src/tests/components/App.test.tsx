@@ -1,5 +1,7 @@
 import {
-    describe, test, expect
+    describe,
+    test,
+    expect
 } from "vitest";
 import {screen} from "@testing-library/react";
 import {renderWithProviders} from "@tests/wrapperProvider";
@@ -22,7 +24,6 @@ describe("App component", () => {
         expect(tested).toBeInTheDocument();
     });
 });
-
 
 describe("Test store", () => {
     test("Change Step function", () => {

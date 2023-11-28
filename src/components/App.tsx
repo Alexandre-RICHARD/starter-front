@@ -1,10 +1,6 @@
 import React from "react";
-import {
-    useAppDispatch, useAppSelector
-} from "@store/hooks";
-import {
-    counterState, counterActions
-} from "@/store/slices/counterSlice";
+import {useAppDispatch, useAppSelector} from "@store/hooks";
+import {counterState, counterActions} from "@/store/slices/counterSlice";
 
 import "./App.scss";
 
@@ -24,64 +20,64 @@ const App: React.FC = () => {
                     Starter rapide pour un nouveau projet
                 </p>
                 <p className="description">
-                    Ce starter contient une configuration
-                    précise et complète pour :
+                    Ce starter contient une configuration précise et complète
+                    pour :
                 </p>
                 <ul className="starter-features-list">
                     <li>
                         Le bundler Vite, rapide et puissant
                     </li>
                     <li>
-                        React, utilisé avec son gestionnaire
-                        de state React-Reudx-Toolkit
+                        React, utilisé avec son gestionnaire de state
+                        React-Reudx-Toolkit
                     </li>
                     <li>
-                        React Refresh, permettant de recharger
-                        sans perdre les infos du state
+                        React Refresh, permettant de recharger sans perdre les
+                        infos du state
                     </li>
                     <li>
-                        Typescript pour améliorer la qualité du code
-                        et être vigilant sur les erreurs
+                        Typescript pour améliorer la qualité du code et être
+                        vigilant sur les erreurs
                     </li>
                     <li>
-                        EsLint pour repérer toutes erreurs allant à
-                        l'encontre des règle de clean code
+                        EsLint pour repérer toutes erreurs allant à l'encontre
+                        des règle de clean code
                     </li>
                     <li>
-                        Configuration de test complète avec l'utilisation
-                        de vitest, jsdom et React-Testing-Library
+                        Configuration de test complète avec l'utilisation de
+                        vitest, jsdom et React-Testing-Library
                     </li>
                     <li>
-                        SCSS pour écrire son style plus logiquement
-                        qu'avec du CSS classique
+                        SCSS pour écrire son style plus logiquement qu'avec du
+                        CSS classique
                     </li>
                     <li>
                         Des alias pour l'importation plus facile
                     </li>
                     <li>
-                        Des scripts npm pratiques pour automatiser
-                        certaines tâches
+                        Des scripts npm pratiques pour automatiser certaines
+                        tâches
                     </li>
                     <li>
-                        Une configuration adaptée pour tester plus
-                        simplement le store avec Redux
+                        Une configuration adaptée pour tester plus simplement le
+                        store avec Redux
                     </li>
                     <li>
-                        Préparation à l'utilisation d'assets et
-                        d'utilities déjà implémenté
+                        Préparation à l'utilisation d'assets et d'utilities déjà
+                        implémenté
                     </li>
                 </ul>
             </div>
             <div className="starter-demonstration">
                 <div className="form-change-number-step">
-                    <label htmlFor="changeStepNumber" >
+                    <label htmlFor="changeStepNumber">
                         Changer le pas du compteur
                     </label>
                     <input
                         id="changeStepNumber"
                         type="number"
                         value={counterStep}
-                        onChange={event => {
+                        onChange={(event) => {
                             changeCounterStep(parseInt(event.target.value));
                         }}
                     />

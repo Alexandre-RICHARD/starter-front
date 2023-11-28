@@ -19,21 +19,13 @@ export default defineConfig({
     "build": {
         "outDir": "./build",
         "cssCodeSplit": false,
-        "rollupOptions": {
-            "input": {
-                "app": "./src/index.html",
-            },
-        },
+        "rollupOptions": {"input": {"app": "./src/index.html"}},
     },
     "test": {
         "globals": true,
         "environment": "jsdom",
         "setupFiles": ["src/tests/setup.ts"],
-        "env": {
-            "IS_REACT_ACT_ENVIRONMENT": "true",
-        },
+        "env": {"IS_REACT_ACT_ENVIRONMENT": "true"},
     },
-    "server": {
-        "open": "./src/index.html",
-    },
+    "server": {"open": "./src/index.html"},
 });

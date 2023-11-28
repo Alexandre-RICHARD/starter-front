@@ -1,13 +1,9 @@
-import {
-    combineReducers, configureStore
-} from "@reduxjs/toolkit";
+import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import type {PreloadedState} from "@reduxjs/toolkit";
 import counterSlice from "@/store/slices/counterSlice";
 
 // Create the root reducer independently to obtain the RootState type
-const rootReducer = combineReducers({
-    "counter": counterSlice,
-});
+const rootReducer = combineReducers({"counter": counterSlice});
 
 export type RootState = ReturnType<typeof rootReducer>;
 

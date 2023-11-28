@@ -1,5 +1,7 @@
 import {
-    describe, test, expect
+    describe,
+    test,
+    expect
 } from "vitest";
 import {sum} from "@utilities/sum";
 

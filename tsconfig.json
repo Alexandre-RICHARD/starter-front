@@ -33,5 +33,5 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": ["src"],
-    "references": [{ "path": "./tsconfig.vite.json" }]
+    "references": [{"path": "./tsconfig.vite.json"}]
 }
