@@ -27,6 +27,7 @@ const counterSlice = createSlice({
     },
 });
 
+// Export all state in one object to have only to imports : Action and State.
 export const counterState = {
     "Step": (state: RootState) => state.counter.counterStep,
     "Value": (state: RootState) => state.counter.counterValue,

@@ -1,3 +1,10 @@
+// File used to provide a render function in the tests
+// allowing a store to be included while avoiding redeclaration
+// render(
+// <Provider store={store}>
+//      <Component />
+// </Provider>
+// ) on each test
 import React, {PropsWithChildren} from "react";
 import {render} from "@testing-library/react";
 import type {RenderOptions} from "@testing-library/react";

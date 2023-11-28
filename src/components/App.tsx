@@ -5,6 +5,7 @@ import {counterState, counterActions} from "@/store/slices/counterSlice";
 import "./App.scss";
 
 const App: React.FC = () => {
+    // Use the typed version create in hooks.ts
     const dispatch = useAppDispatch();
     const counterStep = useAppSelector(counterState.Step);
     const counterValue = useAppSelector(counterState.Value);

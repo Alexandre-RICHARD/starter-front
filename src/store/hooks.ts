@@ -1,3 +1,5 @@
+// Hooks.ts is used for default typed useDispatch and useSelector
+// and avoid the need to do this on every import into components
 import {
     TypedUseSelectorHook,
     useDispatch,

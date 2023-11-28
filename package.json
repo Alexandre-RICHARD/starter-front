@@ -1,4 +1,5 @@
 {
+    "version": "1.0.0",
     "name": "starter-vite-react-redux_toolkit-typescript_scss",
     "scripts": {
         "start": "vite",
