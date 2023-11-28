@@ -29,7 +29,7 @@ const App: React.FC = () => {
                     </li>
                     <li>
                         React, utilisé avec son gestionnaire de state
-                        React-Reudx-Toolkit
+                        React-Redux-Toolkit
                     </li>
                     <li>
                         React Refresh, permettant de recharger sans perdre les
