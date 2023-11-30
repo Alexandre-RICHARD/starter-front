@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {useAppDispatch, useAppSelector} from "@store/hooks";
 import {counterState, counterActions} from "@/store/slices/counterSlice";
 
@@ -13,6 +13,18 @@ const App: React.FC = () => {
     const changeCounterStep = (value: number) => {
         dispatch(counterActions.changeStep(value));
     };
+
+    const [boredActivity, setBoredActivity] = useState("En attente d'une activité à faire à 2...");
+
+    useEffect(()  => {
+        const boredApiUrl = import.meta.env.VITE_BORED_API_URL;
+        const searchActivity = async () => {
+            const response = await (await fetch(boredApiUrl)).json()
+            setBoredActivity(response.activity);
+        }
+        searchActivity()
+
+      }, []);
 
     return (
         <div className="starter">
@@ -101,6 +113,7 @@ const App: React.FC = () => {
                     </button>
                 </div>
             </div>
+            <p>{boredActivity}</p>
         </div>
     );
 };
