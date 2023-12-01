@@ -30,8 +30,9 @@ export const renderWithProviders = (
         ...renderOptions
     }: ExtendedRenderOptions = {}
 ) => {
-    const Wrapper =
-    ({children}: PropsWithChildren<NonNullable<unknown>>): JSX.Element => {
+    const Wrapper = ({
+        children,
+    }: PropsWithChildren<NonNullable<unknown>>): JSX.Element => {
         return (
             <Provider store={store}>
                 {children}
