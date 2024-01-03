@@ -61,10 +61,9 @@ List of major dependencies used in the project:
 
 ```
 project-root
-├─ public
-│  └─ favicon.ico
 ├─ src
 │  ├─ assets
+│  │  └─ images
 │  ├─ components (and their styles)
 │  ├─ store
 │  │  ├─ slices
@@ -100,7 +99,7 @@ Import {func1, func2, func3} from "myPackage"
 ```
 I would like warn on it.
 
-The way I would like it to be 
+The way I would like it to be
 ```js
 Import {
     func1,

@@ -50,12 +50,10 @@ const App: React.FC = () => {
                 <p className="title">
                     Starter rapide pour un nouveau projet
                 </p>
-
                 <p className="description">
                     Ce starter contient une configuration précise et complète
                     pour :
                 </p>
-
                 <ul className="starter-features-list">
                     {starterFeaturesList.map((el, index) => {
                         return (
@@ -66,13 +64,11 @@ const App: React.FC = () => {
                     })}
                 </ul>
             </div>
-
             <div className="starter-demonstration">
                 <div className="form-change-number-step">
                     <label htmlFor="changeStepNumber">
                         Changer le pas du compteur
                     </label>
-
                     <input
                         id="changeStepNumber"
                         type="number"
@@ -82,7 +78,6 @@ const App: React.FC = () => {
                         }}
                     />
                 </div>
-
                 <div className="counter-click">
                     <button
                         className="counter-button"
@@ -91,11 +86,9 @@ const App: React.FC = () => {
                     >
                         -
                     </button>
-
                     <p className="counter-value">
                         {counterValue}
                     </p>
-
                     <button
                         className="counter-button"
                         type="button"
@@ -105,7 +98,6 @@ const App: React.FC = () => {
                     </button>
                 </div>
             </div>
-
             <p>
                 {boredActivity}
             </p>

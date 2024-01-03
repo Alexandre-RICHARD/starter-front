@@ -59,7 +59,7 @@
         "@stylistic/array-element-newline": "error",
         "@stylistic/arrow-parens": ["error", "always"],
         "@stylistic/arrow-spacing": "error",
-        "@stylistic/block-spacing": "error",
+        "@stylistic/block-spacing": ["error", "never"],
         "@stylistic/brace-style": ["error", "1tbs"],
         "@stylistic/comma-dangle": [
             "error",
@@ -118,12 +118,9 @@
         ],
         "@stylistic/no-trailing-spaces": ["error", {"ignoreComments": true}],
         "@stylistic/no-whitespace-before-property": "error",
-        "object-curly-newline": [
+        "@stylistic/object-curly-newline": [
             "error",
-            {
-                "ImportDeclaration": {"multiline": true, "minProperties": 3},
-                "ExportDeclaration": {"multiline": true, "minProperties": 3}
-            }
+            {"multiline": true, "minProperties": 3}
         ],
         "@stylistic/object-curly-spacing": ["error", "never"],
         "@stylistic/quote-props": ["error", "always"],
@@ -206,7 +203,7 @@
             {"checkAttributes": true, "indentLogicalExpressions": true}
         ],
         "react/jsx-indent-props": ["error", 4],
-        "react/jsx-newline": "error",
+        "react/jsx-newline": ["error", {"prevent": true}],
         "react/jsx-one-expression-per-line": "error",
         "react/jsx-wrap-multilines": [
             "error",
@@ -243,7 +240,7 @@
         "no-label-var": "error",
         "no-lone-blocks": "error",
         "no-loop-func": "error",
-        "no-redeclare": "error",
+        "no-redeclare": "off",
         "no-self-compare": "error",
         "no-template-curly-in-string": "error",
         "no-throw-literal": "error",
@@ -263,7 +260,7 @@
         "operator-assignment": "error",
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
-        "prefer-destructuring": "error",
+        "prefer-destructuring": ["error", {"object": true, "array": false}],
         "prefer-object-has-own": "error",
         "quotes": ["error", "double"],
         "require-await": "error",
