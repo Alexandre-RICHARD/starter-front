@@ -1,7 +1,8 @@
 import {
     describe, test, expect, expectTypeOf
 } from "vitest";
-import {sum} from "@utilities/sum";
+
+import {sum} from "@/IndexImporter";
 
 describe("Sum function", () => {
     test("Add 2 numbers and get correct result", () => {

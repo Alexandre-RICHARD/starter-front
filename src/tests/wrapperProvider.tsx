@@ -1,18 +1,13 @@
 // File used to provide a render function in the tests
 // allowing a store to be included while avoiding redeclaration
-// render(
-// <Provider store={store}>
-// <Component />
-// </Provider>
-// ) on each test
 import React, {PropsWithChildren as child} from "react";
 import {render} from "@testing-library/react";
 import type {RenderOptions} from "@testing-library/react";
 import type {PreloadedState} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
 
-import {setupStore} from "@store/store";
-import type {AppStore, RootState} from "@store/store";
+import {setupStore} from "@/IndexImporter";
+import type {AppStore, RootState} from "@/IndexImporter";
 
 // This type interface extends the default options for render from RTL, as well
 // as allows the user to specify other things such as initialState, store.

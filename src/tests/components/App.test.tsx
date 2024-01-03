@@ -2,10 +2,13 @@ import {
     describe, test, expect
 } from "vitest";
 import {screen} from "@testing-library/react";
-import {renderWithProviders} from "@tests/wrapperProvider";
-import App from "@components/App";
-import {setupStore} from "@store/store";
-import {counterActions} from "@slices/counterSlice";
+
+import {
+    App,
+    counterActions,
+    renderWithProviders,
+    setupStore
+} from "@/IndexImporter";
 
 describe("App component", () => {
     test("App mounts properly", () => {

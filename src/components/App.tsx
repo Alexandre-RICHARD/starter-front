@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react";
-import {useAppDispatch, useAppSelector} from "@store/hooks";
-import {counterState, counterActions} from "@/store/slices/counterSlice";
 
+import {
+    counterState,
+    counterActions,
+    useAppDispatch,
+    useAppSelector
+} from "@/IndexImporter";
 import "./App.scss";
 
 const starterFeaturesList = [
