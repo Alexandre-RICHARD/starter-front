@@ -77,7 +77,8 @@ project-root
 │  │  └─ wrapperProvider.tsx
 │  ├─ utilities
 │  ├─ index.html
-│  └─ index.tsx
+│  ├─ index.tsx
+│  └─ IndexImporter.ts
 ├─ .eslintrc.json
 ├─ .gitignore
 ├─ .prettierignore
