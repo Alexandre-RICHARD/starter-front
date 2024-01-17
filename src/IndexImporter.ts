@@ -7,9 +7,10 @@ export {App};
 // =============================================================================
 
 // ? Functions middlewares
+import {errorSaver} from "@utilities/errorSaver";
 import {sum} from "@utilities/sum";
 
-export {sum};
+export {errorSaver, sum};
 
 // =============================================================================
 

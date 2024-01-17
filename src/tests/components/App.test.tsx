@@ -18,10 +18,8 @@ describe("App component", () => {
     });
 
     test("Env variable correctly get", () => {
-        const env = import.meta.env.VITE_BORED_API_URL;
-        expect(env).toBe(
-            "https://www.boredapi.com/api/activity?participants=2"
-        );
+        const env = import.meta.env.VITE_API_URL;
+        expect(env).toBe("http://localhost:3000");
     });
 
     test("App mounts properly", () => {

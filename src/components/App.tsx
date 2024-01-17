@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react";
 import {
     counterState,
     counterActions,
+    errorSaver,
     useAppDispatch,
     useAppSelector
 } from "@/IndexImporter";
@@ -33,19 +34,28 @@ const App: React.FC = () => {
     };
 
     const [
-        boredActivity,
-        setBoredActivity
+        weirdActivity,
+        setWeirdActivity
     ] = useState(
-        "En attente d'une activité à faire à 2..."
+        "En attente d'une idée farfelue..."
     );
 
     useEffect(() => {
-        const boredApiUrl = import.meta.env.VITE_BORED_API_URL;
-        const searchActivity = async () => {
-            const response = await (await fetch(boredApiUrl)).json();
-            setBoredActivity(response.activity);
-        };
-        searchActivity();
+        const apiUrl = import.meta.env.VITE_API_URL;
+        (async () => {
+            try {
+                const response = await (
+                    await fetch(apiUrl + "/getActivity")
+                ).json();
+                setWeirdActivity(response.activity);
+            } catch (error) {
+                const errorF = error as Error;
+                await errorSaver(
+                    "get-activity-failed",
+                    JSON.stringify(errorF.stack)
+                );
+            }
+        })();
     }, []);
 
     return (
@@ -103,7 +113,7 @@ const App: React.FC = () => {
                 </div>
             </div>
             <p>
-                {boredActivity}
+                {weirdActivity}
             </p>
         </div>
     );

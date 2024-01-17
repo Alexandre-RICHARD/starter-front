@@ -25,7 +25,7 @@ A project starter designed to streamline the setup process for new projects. For
 - Practical npm scripts to automate some tasks
 - A configuration adapted to simply test the store with Redux
 - Using of assets and utilities ready
-- Environments variables (an exemple used the [Bored Api](https://www.boredapi.com/))
+- Environments variables
 
 ## Dependencies
 
