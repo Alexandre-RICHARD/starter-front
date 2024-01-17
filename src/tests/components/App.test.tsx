@@ -17,6 +17,13 @@ describe("App component", () => {
         expect(tested).toBeTruthy();
     });
 
+    test("Env variable correctly get", () => {
+        const env = import.meta.env.VITE_BORED_API_URL;
+        expect(env).toBe(
+            "https://www.boredapi.com/api/activity?participants=2"
+        );
+    });
+
     test("App mounts properly", () => {
         renderWithProviders(<App />);
         const tested = screen.getByText(

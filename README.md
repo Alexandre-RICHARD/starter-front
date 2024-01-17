@@ -55,34 +55,38 @@ List of major dependencies used in the project:
 - `build`: Build the project using TypeScript and Vite.
 - `build-preview`: Preview the built project using Vite.
 - `clean`: Remove the build directory.
-- `clean:all`: Remove both `node_modules` and the build directory.
+- `clean:all`: Remove both `node_modules` and the `build` directory.
 
 ## Project Structure
 
 ```
-project-root
-├─ src
-│  ├─ assets
-│  │  └─ images
-│  ├─ components (and their styles)
-│  ├─ store
-│  │  ├─ slices
+starter-vite-react-redux_toolkit-typescript_scss
+├─ src/
+│  ├─ assets/
+│  │  └─ images/
+│  │     └─ favicon.ico
+│  │
+│  ├─ components/
+│  ├─ store/
+│  │  ├─ slices/
 │  │  ├─ hooks.ts
 │  │  └─ store.ts
-│  ├─ styles
-│  ├─ tests
-│  │  ├─ components
-│  │  ├─ utilities
+│  │
+│  ├─ styles/
+│  ├─ tests/
 │  │  ├─ setup.ts
 │  │  └─ wrapperProvider.tsx
-│  ├─ utilities
-│  ├─ index.html
+│  │
+│  ├─ utilities/
 │  ├─ index.tsx
 │  └─ IndexImporter.ts
+│
+├─ .env.dev
+├─ .env.prod
 ├─ .eslintrc.json
 ├─ .gitignore
-├─ .prettierignore
 ├─ .prettierrc
+├─ index.html
 ├─ package.json
 ├─ pnpm-lock.yaml
 ├─ README.md
