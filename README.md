@@ -16,7 +16,7 @@ A project starter designed to streamline the setup process for new projects. For
 - React used accompanied by Redux Toolkit State Manager
 - React Refresh, allowing you to save/reload without losing state information
 - TypeScript, to uncover errors more quickly
-- ESLint, Prettier, to keep a beautiful code
+- ESLint, to keep a beautiful code
 - Sass, to write your style more logically
 
 ## Other details :
@@ -37,7 +37,6 @@ List of major dependencies used in the project:
 - `@types/...`
 - `eslint`
 - `jsdom`
-- `prettier`
 - `react`
 - `sass`
 - `typescript`
@@ -49,7 +48,6 @@ List of major dependencies used in the project:
 - `start`: Run the development server using Vite.
 - `test`: Run tests using Vitest.
 - `update`: Update project dependencies.
-- `prettier`: Format source code using Prettier.
 - `lint`: Run ESLint on TypeScript files and report unused directives.
 - `lint & fix`: Run ESLint on TypeScript files, fix issues, and report unused directives.
 - `build`: Build the project using TypeScript and Vite.
@@ -78,14 +76,12 @@ starter-vite-react-redux_toolkit-typescript_scss
 │  │  └─ wrapperProvider.tsx
 │  │
 │  ├─ utilities/
-│  ├─ index.tsx
-│  └─ IndexImporter.ts
+│  └─ index.tsx
 │
 ├─ .env.dev
 ├─ .env.prod
 ├─ .eslintrc.json
 ├─ .gitignore
-├─ .prettierrc
 ├─ index.html
 ├─ package.json
 ├─ pnpm-lock.yaml
@@ -93,29 +89,4 @@ starter-vite-react-redux_toolkit-typescript_scss
 ├─ tsconfig.json
 ├─ tsconfig.vite.json
 └─ vite.config.ts
-```
-
-### Error or miss things
-Only one formatting rules seems to be not handled by Eslint or Prettier, it's about deconstructed import.
-When we import somethings like this
-
-```js
-Import {func1, func2, func3} from "myPackage"
-```
-I would like warn on it.
-
-The way I would like it to be
-```js
-Import {
-    func1,
-    func2,
-    func3
-} from "myPackage"
-```
-
-But Eslint and Prettier transfome it into :
-```js
-Import {
-    func1, func2, func3
-} from "myPackage"
 ```

@@ -1,35 +1,32 @@
-import {defineConfig, loadEnv} from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig, loadEnv } from "vite";
+import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(({mode}) => {
-    const env = loadEnv(mode, process.cwd(), "");
-    return {
-        "server": {"port": parseInt(env.VITE_LOCAL_PORT)},
-        "resolve": {
-            "alias": {
-                "@": path.resolve(__dirname, "./src"),
-                "@assets": path.resolve(__dirname, "./src/assets"),
-                "@components": path.resolve(__dirname, "./src/components"),
-                "@store": path.resolve(__dirname, "./src/store"),
-                "@slices": path.resolve(__dirname, "./src/store/slices"),
-                "@styles": path.resolve(__dirname, "./src/styles"),
-                "@tests": path.resolve(__dirname, "./src/tests"),
-                "@utilities": path.resolve(__dirname, "./src/utilities"),
-            },
-        },
-        "plugins": [react()],
-        "build": {
-            "assetsDir": "./",
-            "outDir": "./build",
-            "cssCodeSplit": false,
-            "rollupOptions": {"input": {"app": "./index.html"}},
-        },
-        "test": {
-            "globals": true,
-            "environment": "jsdom",
-            "setupFiles": ["src/tests/setup.ts"],
-            "env": {"IS_REACT_ACT_ENVIRONMENT": "true"},
-        },
-    };
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+  return {
+    server: { port: parseInt(env.VITE_LOCAL_PORT, 10) },
+    resolve: {
+      alias: {
+        "@src": path.resolve(__dirname, "src"),
+        "@api": path.resolve(__dirname, "src/api"),
+        "@assets": path.resolve(__dirname, "src/assets"),
+        "@component": path.resolve(__dirname, "src/component"),
+        "@enum": path.resolve(__dirname, "src/enum"),
+        "@helper": path.resolve(__dirname, "src/helper"),
+        "@store": path.resolve(__dirname, "src/store"),
+        "@style": path.resolve(__dirname, "src/style"),
+        "@translation": path.resolve(__dirname, "src/assets/translation"),
+        "@types": path.resolve(__dirname, "src/types"),
+      },
+    },
+    plugins: [react()],
+    build: {
+      assetsDir: "./",
+      cssCodeSplit: false,
+      manifest: true,
+      outDir: "./build",
+      rollupOptions: { input: { app: "./index.html" } },
+    },
+  };
 });

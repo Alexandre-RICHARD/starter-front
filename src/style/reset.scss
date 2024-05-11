@@ -85,30 +85,30 @@ u,
 ul,
 var,
 video {
-    color: inherit;
-    background-color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    font-weight: 300;
-    text-decoration: none;
-    line-height: normal;
-    vertical-align: baseline;
-    appearance: none;
-    font-style: normal;
-    font-variant: normal;
-    font-family: inherit;
-    text-rendering: inherit;
-    text-indent: 0;
-    text-transform: none;
-    transition: inherit;
+  color: inherit;
+  background-color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: normal;
+  vertical-align: baseline;
+  appearance: none;
+  font-style: normal;
+  font-variant: normal;
+  font-family: inherit;
+  text-rendering: inherit;
+  text-indent: 0;
+  text-transform: none;
+  transition: inherit;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 article,
@@ -124,38 +124,38 @@ main,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 img,
 video {
-    height: auto;
-    max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a,
 label,
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
