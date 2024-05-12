@@ -23,7 +23,7 @@ export const useTranslation = () => {
     if (translations) {
       return translations;
     }
-    return `_${key}_`;
+    return key;
   };
 
   return { getT: getTranslation };
