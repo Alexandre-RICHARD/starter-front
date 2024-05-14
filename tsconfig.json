@@ -2,23 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"],
-      "@api/*": ["src/api/*"],
-      "@assets/*": ["src/assets/*"],
-      "@component/*": ["src/component/*"],
-      "@enum/*": ["src/enum/*"],
-      "@helper/*": ["src/helper/*"],
-      "@store/*": ["src/store/*"],
-      "@style/*": ["src/style/*"],
-      "@translation/*": ["src/assets/translation/*"],
-      "@types/*": ["src/types/*"]
+      "@styles/*": ["src/styles/*"]
     },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": [],
+    "types": ["vitest/jsdom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -35,5 +26,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
+  "exclude": ["node_modules", "build"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

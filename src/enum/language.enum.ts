@@ -1,15 +1,17 @@
+import type { LanguageType } from "../types/language";
+
 export enum LanguageEnum {
   FR = "fr",
   EN = "en",
 }
 
-export const LanguageList = [
+export const LanguageList: LanguageType[] = [
   {
-    name: "English",
     key: LanguageEnum.EN,
+    name: "English",
   },
   {
-    name: "Français",
     key: LanguageEnum.FR,
+    name: "Français",
   },
 ];

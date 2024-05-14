@@ -17,7 +17,7 @@ module.exports = {
     "airbnb-typescript",
     "plugin:prettier/recommended",
   ],
-  plugins: ["@stylistic", "react-refresh"],
+  plugins: ["@stylistic", "simple-import-sort", "react-refresh"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -57,6 +57,8 @@ module.exports = {
     // Import rules
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
 
     // React rules
     "react/function-component-definition": [

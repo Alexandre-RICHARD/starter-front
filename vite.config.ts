@@ -1,6 +1,6 @@
-import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
@@ -8,16 +8,7 @@ export default defineConfig(({ mode }) => {
     server: { port: parseInt(env.VITE_LOCAL_PORT, 10) },
     resolve: {
       alias: {
-        "@src": path.resolve(__dirname, "src"),
-        "@api": path.resolve(__dirname, "src/api"),
-        "@assets": path.resolve(__dirname, "src/assets"),
-        "@component": path.resolve(__dirname, "src/component"),
-        "@enum": path.resolve(__dirname, "src/enum"),
-        "@helper": path.resolve(__dirname, "src/helper"),
-        "@store": path.resolve(__dirname, "src/store"),
-        "@style": path.resolve(__dirname, "src/style"),
-        "@translation": path.resolve(__dirname, "src/assets/translation"),
-        "@types": path.resolve(__dirname, "src/types"),
+        "@styles": path.resolve(__dirname, "src/styles"),
       },
     },
     plugins: [react()],
@@ -27,6 +18,16 @@ export default defineConfig(({ mode }) => {
       manifest: true,
       outDir: "./build",
       rollupOptions: { input: { app: "./index.html" } },
+    },
+    test: {
+      environment: "jsdom",
+      include: ["**/*.test.ts?(x)"],
+      exclude: [
+        "**/node_modules/**",
+        "**/build/**",
+        "**/.git/**",
+        "**/{vite,vitest}.config.*",
+      ],
     },
   };
 });

@@ -1,11 +1,12 @@
+import "./App.scss";
+
 import React from "react";
 import { useShallow } from "zustand/react/shallow";
 
-import { useTranslation } from "@helper/translation.helper";
-import { LanguageList } from "@src/enum/language.enum";
-import { useTranslationStore } from "@store/translation";
-import "./App.scss";
-import { CookieHelper } from "@src/helper/cookie.helper";
+import { LanguageList } from "../enum/language.enum";
+import { CookieHelper } from "../helper/cookie.helper";
+import { useTranslation } from "../helper/translation.helper";
+import { useTranslationStore } from "../store/translation";
 
 export const App: React.FC = () => {
   const [language, setLanguage] = useTranslationStore(

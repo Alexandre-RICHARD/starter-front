@@ -1,6 +1,8 @@
-import { LanguageEnum } from "@src/enum/language.enum";
-import { CookieHelper } from "@src/helper/cookie.helper";
 import { create } from "zustand";
+
+import { CookieEnum } from "../enum/cookie.enum";
+import { LanguageEnum } from "../enum/language.enum";
+import { CookieHelper } from "../helper/cookie.helper";
 
 interface TranslationState {
   language: LanguageEnum;
@@ -8,9 +10,11 @@ interface TranslationState {
 }
 
 export const useTranslationStore = create<TranslationState>()((set) => ({
-  language: (CookieHelper.getCookie("lang") as LanguageEnum) || LanguageEnum.EN,
+  language:
+    (CookieHelper.getCookie(CookieEnum.LANG) as LanguageEnum) ||
+    LanguageEnum.EN,
   setLanguage: (newLanguage: LanguageEnum) => {
-    CookieHelper.setCookie("lang", newLanguage, 24 * 365 * 100);
+    CookieHelper.setCookie(CookieEnum.LANG, newLanguage, 24 * 365 * 100);
     set(() => ({ language: newLanguage }));
   },
 }));

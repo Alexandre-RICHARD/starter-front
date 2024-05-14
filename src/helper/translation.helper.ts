@@ -1,8 +1,7 @@
-import { LanguageEnum } from "@enum/language.enum";
-import { common as enCommon } from "@translation/en/common";
-import { common as frCommon } from "@translation/fr/common";
-
-import { getState } from "@store/translation";
+import { common as enCommon } from "../assets/translation/en/common";
+import { common as frCommon } from "../assets/translation/fr/common";
+import { LanguageEnum } from "../enum/language.enum";
+import { getState } from "../store/translation";
 
 type Translation = Record<string, string>;
 
