@@ -6,10 +6,10 @@ import { useShallow } from "zustand/react/shallow";
 import { LanguageList } from "../enum/language.enum";
 import { CookieHelper } from "../helper/cookie.helper";
 import { useTranslation } from "../helper/translation.helper";
-import { useTranslationStore } from "../store/translation";
+import { useCombinedStore } from "../store/combined.store";
 
 export const App: React.FC = () => {
-  const [language, setLanguage] = useTranslationStore(
+  const [language, setLanguage] = useCombinedStore(
     useShallow((state) => [state.language, state.setLanguage]),
   );
   const T = useTranslation();

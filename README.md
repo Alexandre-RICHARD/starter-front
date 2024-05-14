@@ -13,43 +13,50 @@ A project starter designed to streamline the setup process for new projects. For
 ## Technologies Used
 
 - Vite bundler, fast and powerful
-- React used accompanied by Redux Toolkit State Manager
+- React used accompanied by Zustand State Manager
 - React Refresh, allowing you to save/reload without losing state information
 - TypeScript, to uncover errors more quickly
-- ESLint, to keep a beautiful code
+- ESLint deeply configured with Prettier, to keep a beautiful code
 - Sass, to write your style more logically
-
-## Other details :
-
-- Aliases for easier import
-- Practical npm scripts to automate some tasks
-- A configuration adapted to simply test the store with Redux
-- Using of assets and utilities ready
-- Environments variables
+- Vitest to make unit tests and functionnal tests with jsdom
 
 ## Dependencies
 
 List of major dependencies used in the project:
 
-- `@reduxjs/toolkit`
-- `@stylistic/eslint-plugin`
-- `@testing-library/...`
-- `@types/...`
 - `eslint`
-- `jsdom`
 - `react`
+- `prettier`
 - `sass`
 - `typescript`
 - `vite`
 - `vitest`
+- `zustand`
+
+List of Eslint related dependencies
+
+- `@stylistic/eslint-plugin`
+- `@typescript-eslint/eslint-plugin`
+- `@typescript-eslint/parser`
+- `eslint-config-airbnb`
+- `eslint-config-airbnb-typescript`
+- `eslint-config-prettier`
+- `eslint-plugin-import`
+- `eslint-plugin-jsx-a11y`
+- `eslint-plugin-prettier`
+- `eslint-plugin-react`
+- `eslint-plugin-react-hooks`
+- `eslint-plugin-react-refresh`
+- `eslint-plugin-simple-import-sort`
+- `typescript-eslint`
 
 ## Scripts
 
 - `start`: Run the development server using Vite.
 - `test`: Run tests using Vitest.
 - `update`: Update project dependencies.
-- `lint`: Run ESLint on TypeScript files and report unused directives.
-- `lint & fix`: Run ESLint on TypeScript files, fix issues, and report unused directives.
+- `lint`: Run ESLint.
+- `lint & fix`: Run ESLint and fix issues.
 - `build`: Build the project using TypeScript and Vite.
 - `build-preview`: Preview the built project using Vite.
 - `clean`: Remove the build directory.
@@ -58,35 +65,42 @@ List of major dependencies used in the project:
 ## Project Structure
 
 ```
-starter-vite-react-redux_toolkit-typescript_scss
 ├─ src/
+│  ├─ api/
+│  │
 │  ├─ assets/
-│  │  └─ images/
-│  │     └─ favicon.ico
+│  │  ├─ images/
+│  │  └─ translation/
 │  │
-│  ├─ components/
-│  ├─ store/
-│  │  ├─ slices/
-│  │  ├─ hooks.ts
-│  │  └─ store.ts
+│  ├─ component/
+│  │  ├─ allComponentFolder/
+│  │  ├─ App.scss
+│  │  └─ App.tsx
 │  │
-│  ├─ styles/
-│  ├─ tests/
-│  │  ├─ setup.ts
-│  │  └─ wrapperProvider.tsx
+│  ├─ enum/
+│  ├─ helper/
+│  ├─ store
+│  │  ├─ combined.store.ts
+│  │  └─ all.other.store.ts
+│  ├─ styles
+│  │  ├─ index.scss
+│  │  ├─ reset.scss
+│  │  └─ variables.scss
 │  │
-│  ├─ utilities/
-│  └─ index.tsx
+│  ├─ test/
+│  ├─ types/
+│  │
+│  ├─ index.tsx
+│  └─ vite-env.d.ts
 │
-├─ .env.dev
-├─ .env.prod
-├─ .eslintrc.json
+├─ .eslintrc.cjs
 ├─ .gitignore
+├─ .prettierrc.cjs
 ├─ index.html
 ├─ package.json
 ├─ pnpm-lock.yaml
 ├─ README.md
 ├─ tsconfig.json
-├─ tsconfig.vite.json
+├─ tsconfig.node.json
 └─ vite.config.ts
 ```
