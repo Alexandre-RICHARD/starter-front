@@ -34,6 +34,9 @@ module.exports = {
     },
   },
   rules: {
+    // Classic rules
+    "no-console": ["warn", { allow: ["error"] }],
+
     // Prettier rules
     "prettier/prettier": [
       "error",
